@@ -13,9 +13,16 @@ app.get('/about_me',function(req,res){res.sendFile(path.join(__dirname,'ui','abo
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+app.get('/ui/collg-logo.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'collg-logo.png'));
+app.get('/ui/rs.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'rs.jpg'));
+app.get('/ui/school-logo.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'school-logo.jpg'));
+app.get('/ui/school-logo2.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'school-logo2.jpg'));
+app.get('/ui/slider.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'slider.jpg'));
 });
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
