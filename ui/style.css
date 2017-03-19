@@ -32,7 +32,7 @@ a:hover{color:#FF9900;
 p:hover{color:#FE1077;
 font-weight:bold;}
 #slider {
-	background-image:url("ui/slider.jpg");
+	background-image:url("/ui/slider.jpg");
 	background-size:100% 100%;
 	background-repeat:no-repeat;
 	height:390px;
