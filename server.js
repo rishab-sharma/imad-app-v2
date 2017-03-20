@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var counter = 0;
 var app = express();
 app.use(morgan('combined'));
 
@@ -12,6 +12,10 @@ app.get('/about_me',function(req,res){res.sendFile(path.join(__dirname,'ui','abo
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+app.get('/counter', function (req, res) {
+    counter = counter + 1;
+  res.send(counter.toString());
 });
 app.get('/ui/collg-logo.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'collg-logo.png'));
