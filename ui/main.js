@@ -15,6 +15,6 @@ request.onreadystatechange = function() {
     }
 };  
 request.open('GET','http://rishab-sharma.imad.hasura-app.io/counter',true);
-request.send(null);
+request.send(null);         
     
 };
