@@ -20,7 +20,7 @@ request.send(null);
 var nameInput =document.getElementById("namre");
 var name = nameInput.value;
 var submit = document.getElementById("submit_btn");
-submit.onclick() = function() {
+submit.onclick = function() {
 var names = ['name1','nmae2','name3'];
 var list='';
 for (var i=0;i<nmaes.length;i++){
