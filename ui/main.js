@@ -20,11 +20,11 @@ request.send(null);
 var nameInput =document.getElementById("namre");
 var name = nameInput.value;
 var submit = document.getElementById("submit_btn");
-submit.onclick() = function () {
+submit.onclick() = function() {
 var names = [name1,nmae2,name3];
 var list='';
 for (var i=0;i<nmae.length;i++){
-    list += '<li>' + names[i] + '</li>'
+    list += '<li>' + names[i] + '</li>';
 }
 var ul = document.getElementById("name_list");
 ul.innerHTML = list;
