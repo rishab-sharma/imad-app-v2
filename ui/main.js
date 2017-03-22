@@ -27,5 +27,5 @@ for (var i=0;i<nmaes.length;i++){
     list += '<li>' + names[i] + '</li>';
 }
 var ul = document.getElementById("name_list");
-ul.innerHTML = list;
+ul.innerHTML = "Hii";
 };
