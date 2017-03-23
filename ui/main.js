@@ -18,10 +18,11 @@ request.open('GET','http://rishab-sharma.imad.hasura-app.io/counter',true);
 request.send(null);         
 };
 
-var nameInput =document.getElementById("name");
-var name = nameInput.value;
+
 var submit = document.getElementById('submit1');
 submit.onclick = function() {
+var nameInput =document.getElementById("name");
+var name = nameInput.value;
 var request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
