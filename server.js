@@ -35,7 +35,6 @@ app.get('/ui/slider.jpg', function (req, res) {
 var names=[];
 app.get('/submit-name/:name', function (req, res) {
   var name=req.params.name;
-  names=[];
   names.push(name);
   //JSON javascript object notation
   res.send(JSON.stringify(names));
