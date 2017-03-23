@@ -35,9 +35,10 @@ app.get('/ui/slider.jpg', function (req, res) {
 var names=[]
 app.get('/submit-name/:name', function (req, res) {
   var name=req.params.name;
-  names.push(name);
+  names=[];
+  //names.push(name);
   //JSON javascript object notation
-  res.send(JSON.stringify(names));
+  //res.send(JSON.stringify(names));
 });
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
