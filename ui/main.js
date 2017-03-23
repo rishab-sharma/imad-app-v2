@@ -27,5 +27,5 @@ for (var i=0;i<nmaes.length;i++){
     list += '<li>' + names[i] + '</li>';
 }
 var ul = document.getElementById('namelist');
-ul.innerHTML = list;
+ul.innerHTML = '<li>koop</li>';
 };
