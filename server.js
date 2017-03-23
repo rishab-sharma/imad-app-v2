@@ -32,6 +32,13 @@ app.get('/ui/school-logo2.jpg', function (req, res) {
 app.get('/ui/slider.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'slider.jpg'));
 });
+var names=[]
+app.get('/submit-name:name', function (req, res) {
+  var name=req.params.name;
+  names.push(name);
+  //JSON javascript object notation
+  res.send(JSON.stringify(names));
+});
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
