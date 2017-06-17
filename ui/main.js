@@ -1,45 +1,76 @@
-//console.log('Loaded!');
-var button = document.getElementById("counter");
+/**
+*
+* ---------------------------------------------------------------------------
+*
+* Template :    Luna | Coming Soon Html 5 Template
+* Author :      CoderHut
+* Author URI :  http://hiknik.com/luna/
+* Version :     1.0
+*
+* --------------------------------------------------------------------------- 
+*
+*/
 
-button.onclick = function() {
-    
-var request = new XMLHttpRequest();
+(function ($) {
 
-request.onreadystatechange = function() {
-    if (request.readyState === XMLHttpRequest.DONE){
-        if (request.status === 200){
-            var counter = request.responseText;
-            var span = document.getElementById('count');
-            span.innerHTML = counter.toString();
-        }
-    }
-};  
-request.open('GET','http://rishab-sharma.imad.hasura-app.io/counter',true);
-request.send(null);         
-};
+    "use strict";
 
+    $(document).on('ready', function () {
 
-var submit = document.getElementById('submit1');
-submit.onclick = function() {
-var nameInput =document.getElementById("name");
-var name = nameInput.value;
-var request = new XMLHttpRequest();
+        /*  ======================================
+            Sidebar menu
+        ====================================== */
+        var sidbarBtn  = $('.siderbar-btn, .theme-btn');
+        sidbarBtn.on('click', function () {
+            $('.sidebar-contant').css('right', '0');
+            $('.particle-wrappar, .bubble-wrappar, .main-wrappar, .gradient-wrappar, .polygon-wrappar, .smoky-wrappar, .solid-color-wrappar, #main-bgvideo').css('height', '100vh');
+            return false;
+        });
+        
+        var aboutI = $('.about-us-area i');
+        aboutI.on('click', function () {
+            $('.sidebar-contant').css('right', '-100%');
+            $('.particle-wrappar, .bubble-wrappar, .main-wrappar, .gradient-wrappar, .polygon-wrappar, .smoky-wrappar, .solid-color-wrappar, #main-bgvideo').css('height', '100%');
+            return false;
+        });
+        
+        /*  ======================================
+            join us area
+        ====================================== */
+        var ghostBtnC = $('.theme-ghost-btn');
+        ghostBtnC.on('click', function () {
+            $('.join-us-area').addClass('visble-joinus');
+            return false;
+        });
 
-request.onreadystatechange = function() {
-    if (request.readyState === XMLHttpRequest.DONE){
-        if (request.status === 200){
-            var names = request.responseText;
-            names = JSON.parse(names);
-            var list='';
-            for (var i=0;i<names.length;i++){
-               list += '<li>' + names[i] + '</li>';
-            }
-            var ul = document.getElementById('namelist');
-            ul.innerHTML = list;
-        }
-    }
-};  
-request.open('GET','http://rishab-sharma.imad.hasura-app.io/submit-name/'+name,true);
-request.send(null);         
+        var contenI = $('.jon-us-content i');
+        contenI.on('click', function () {
+            $('.join-us-area').removeClass('visble-joinus');
+            return false;
+        });
+        
+        /*  ======================================
+            Refresh page on resize
+        ====================================== */
+        
+        $(window).bind('resize', function (e) {
+            if (window.RT) clearTimeout(window.RT);
+            window.RT = setTimeout(function () {
+                this.location.reload(false); /* false to get page from cache */
+            }, 100);
+        });
+        
 
-};
+        
+    });
+
+    $(window).on('load', function () {
+
+        /*  ======================================
+            Preloader
+        ====================================== */
+        var themePreloader = $('.theme-preloader');
+        themePreloader.fadeOut('500');
+        
+    });
+}(jQuery));
