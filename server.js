@@ -32,6 +32,9 @@ app.get('/bootstrap.min.css', function (req, res) {
 app.get('/responsive.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'responsive.css'));
 });
+app.get('/vegas.min.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'vegas.min.js'));
+});
 var names=[];
 app.get('/submit-name/:name', function (req, res) {
   var name=req.params.name;
