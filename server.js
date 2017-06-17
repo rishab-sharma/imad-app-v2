@@ -35,6 +35,15 @@ app.get('/responsive.css', function (req, res) {
 app.get('/vegas.min.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'vegas.min.js'));
 });
+app.get('/particles.min.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'particles.min.js'));
+});
+app.get('/vegas.min.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'vegas.min.css'));
+});
+app.get('/animate.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'animate.css'));
+});
 app.get('/modernizr-2.8.3.min.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'modernizr-2.8.3.min.js'));
 });
@@ -44,6 +53,9 @@ app.get('/jquery-2.2.4.min.js', function (req, res) {
 
 app.get('/normalize.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'normalize.css'));
+});
+app.get('/poly_lines.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'poly_lines.html'));
 });
 var names=[];
 app.get('/submit-name/:name', function (req, res) {
