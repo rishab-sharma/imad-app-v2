@@ -38,6 +38,9 @@ app.get('/vegas.min.js', function (req, res) {
 app.get('/modernizr-2.8.3.min.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'modernizr-2.8.3.min.js'));
 });
+app.get('/jquery-2.2.4.min.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'jquery-2.2.4.min.js'));
+});
 var names=[];
 app.get('/submit-name/:name', function (req, res) {
   var name=req.params.name;
