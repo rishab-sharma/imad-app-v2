@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 });
 app.get('/draw.html',function(req,res){res.sendFile(path.join(__dirname,'ui','draw.html'));
 });
-app.get('/ui/style.css', function (req, res) {
+app.get('/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 var counter = 0;
