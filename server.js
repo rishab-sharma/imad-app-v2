@@ -41,6 +41,10 @@ app.get('/modernizr-2.8.3.min.js', function (req, res) {
 app.get('/jquery-2.2.4.min.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'jquery-2.2.4.min.js'));
 });
+
+app.get('/normalize.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'normalize.css'));
+});
 var names=[];
 app.get('/submit-name/:name', function (req, res) {
   var name=req.params.name;
