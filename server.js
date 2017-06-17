@@ -44,6 +44,12 @@ app.get('/vegas.min.css', function (req, res) {
 app.get('/animate.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'animate.css'));
 });
+app.get('/01.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', '01.jpg'));
+});
+app.get('/font-awesome.min.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'font-awesome.min.css'));
+});
 app.get('/modernizr-2.8.3.min.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'modernizr-2.8.3.min.js'));
 });
